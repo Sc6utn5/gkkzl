@@ -1,0 +1,370 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Göktürk Araba Profil</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap">
+<style>
+/* Layout: LinkedIn-style profile. Banner + avatar card on top, then a single reading column of sections with a sticky pill nav. Teal accent; HTML/CSS/JS hues used only as small tags. */
+:root{
+ --bg:#F4F6F8;--surface:#FFFFFF;--ink:#0E1A26;--muted:#566476;--line:#DFE4EA;--accent:#0B6E75;--onaccent:#fff;--soft:#E3F0F1;
+ --html:#C93E17;--css:#2457D6;--js:#946500;--ok:#177A45;--code:#EDF0F4;
+ --ban1:#0E1A26;--ban2:#0B6E75;
+ --f-ui:"IBM Plex Sans",system-ui,"Segoe UI",sans-serif;--f-mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;--f-name:"Fraunces",Georgia,serif;
+ --gx:max(16px,env(safe-area-inset-left,0px));--gy:max(16px,env(safe-area-inset-right,0px));
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0A121C;--surface:#111C2B;--ink:#E8EEF6;--muted:#94A2B6;--line:#223043;--accent:#4FC3CC;--onaccent:#05212A;--soft:#123039;--html:#FF7A52;--css:#7FA2FF;--js:#E8B63A;--ok:#4CC38A;--code:#0C1624;--ban1:#0A121C;--ban2:#0F4A52;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0A121C;--surface:#111C2B;--ink:#E8EEF6;--muted:#94A2B6;--line:#223043;--accent:#4FC3CC;--onaccent:#05212A;--soft:#123039;--html:#FF7A52;--css:#7FA2FF;--js:#E8B63A;--ok:#4CC38A;--code:#0C1624;--ban1:#0A121C;--ban2:#0F4A52;color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px;overflow-x:hidden;overflow-y:auto}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.6 var(--f-ui);padding-left:var(--gx);padding-right:var(--gy);-webkit-font-smoothing:antialiased;overflow:visible;height:auto}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--bg)}
+h1,h2,h3,p,ul,ol{margin:0}ul,ol{padding:0;list-style:none}
+a{color:var(--accent)}button{font:inherit;color:inherit;cursor:pointer}
+code{font:500 .86em var(--f-mono);background:var(--code);border:1px solid var(--line);padding:1px 6px;border-radius:5px}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:6px}
+.wrap{max-width:920px;margin:0 auto;padding-top:20px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;min-width:0}
+
+/* profile header */
+.prof{overflow:hidden;position:relative}
+.banner{height:190px;position:relative;background:linear-gradient(120deg,var(--ban1),var(--ban2));overflow:hidden}
+.banner::before{content:"";position:absolute;inset:-50%;background-image:linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px);background-size:36px 36px;transform:rotate(-8deg);animation:drift 24s linear infinite}
+@keyframes drift{to{background-position:36px 36px,36px 36px}}
+.banner .bars{position:absolute;left:0;right:0;bottom:0;display:flex;height:5px}
+.banner .bars i{flex:1}.banner .bars i:nth-child(1){background:#FF7A52}.banner .bars i:nth-child(2){background:#7FA2FF}.banner .bars i:nth-child(3){background:#E8B63A}
+.banner span{position:absolute;right:18px;top:16px;font:500 11px var(--f-mono);letter-spacing:.12em;color:rgba(255,255,255,.75);text-transform:uppercase}
+.ph{padding:0 clamp(18px,4vw,34px) 28px;position:relative}
+.avatar{width:152px;height:152px;border-radius:50%;margin-top:-76px;border:5px solid var(--surface);background:linear-gradient(135deg,var(--accent),var(--ban1));display:grid;place-items:center;overflow:hidden;position:relative;animation:pop .8s cubic-bezier(.2,.8,.2,1) both;box-shadow:0 8px 30px rgba(0,0,0,.18)}
+.avatar span{font:600 3.2rem var(--f-name);color:#fff;letter-spacing:.02em}
+.avatar img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+@keyframes pop{from{transform:scale(.6);opacity:0}to{transform:none;opacity:1}}
+.head{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:18px;align-items:end;margin-top:14px}
+@media(max-width:700px){.head{grid-template-columns:1fr}}
+h1{font:600 clamp(2rem,5vw,2.9rem)/1.05 var(--f-name);letter-spacing:-.01em}
+.role{font-size:1.1rem;margin-top:6px}
+.sub{color:var(--muted);margin-top:4px;font-size:.98rem}
+.status{display:inline-flex;align-items:center;gap:8px;margin-top:14px;border:1px solid var(--line);background:var(--bg);border-radius:999px;padding:5px 12px;font-size:13.5px}
+.status i{width:8px;height:8px;border-radius:50%;background:var(--ok);animation:ping 2.2s infinite}
+@keyframes ping{70%{box-shadow:0 0 0 8px transparent}0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--ok) 60%,transparent)}}
+.acts{display:flex;gap:8px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;color:var(--ink);border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:9px 16px;font-size:14.5px;font-weight:500;transition:transform .2s,border-color .2s,filter .2s}
+.btn:hover{border-color:var(--accent);transform:translateY(-2px)}
+.btn.pri{background:var(--accent);color:var(--onaccent);border-color:var(--accent)}
+.btn.pri:hover{filter:brightness(1.08)}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin-top:26px;border-top:1px solid var(--line);padding-top:20px;gap:10px}
+@media(max-width:600px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.stats b{display:block;font:600 1.9rem/1 var(--f-ui);font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.stats span{color:var(--muted);font-size:13.5px}
+
+/* nav */
+.nav{position:sticky;top:calc(8px + env(safe-area-inset-top,0px));z-index:50;margin:14px 0;display:flex;gap:4px;overflow-x:auto;padding:6px;background:color-mix(in srgb,var(--surface) 88%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid var(--line);border-radius:999px;scrollbar-width:none}
+.nav::-webkit-scrollbar{display:none}
+.nav a{flex:none;text-decoration:none;color:var(--muted);font-size:14px;font-weight:500;padding:7px 14px;border-radius:999px;transition:.2s}
+.nav a:hover{color:var(--ink)}.nav a.on{background:var(--ink);color:var(--bg)}
+.nav .sp{flex:1}.nav button{flex:none;border:0;background:transparent;border-radius:999px;padding:7px 12px;color:var(--muted)}
+
+/* sections */
+section{padding:clamp(20px,4vw,32px);margin-bottom:14px}
+h2{font:600 1.45rem/1.2 var(--f-name);margin-bottom:16px;display:flex;align-items:center;gap:12px}
+h2::before{content:"";width:5px;height:22px;border-radius:3px;background:var(--accent)}
+.about p{max-width:68ch}.about p+p{margin-top:12px}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tag{font:500 12px var(--f-mono);border:1px solid var(--line);border-radius:999px;padding:4px 11px;color:var(--muted);background:var(--bg)}
+.tag.h{color:var(--html)}.tag.c{color:var(--css)}.tag.j{color:var(--js)}
+
+.edu{display:grid;grid-template-columns:56px minmax(0,1fr);gap:16px}
+.logo{width:56px;height:56px;border-radius:12px;background:var(--ink);color:var(--bg);display:grid;place-items:center;font:500 14px var(--f-mono)}
+.edu h3{font-size:1.15rem;line-height:1.3}
+.edu .m{color:var(--muted);font-size:14.5px;margin-top:3px}
+.track{margin-top:20px}
+.track .bar{height:8px;border-radius:4px;background:var(--line);overflow:hidden}
+.track .bar i{display:block;height:100%;width:0;border-radius:4px;background:var(--accent);transition:width 1.4s cubic-bezier(.2,.8,.2,1)}
+.track .lab{display:flex;justify-content:space-between;color:var(--muted);font:500 11px var(--f-mono);margin-top:8px;letter-spacing:.05em;text-transform:uppercase}
+.wks{display:grid;grid-template-columns:repeat(13,minmax(0,1fr));gap:5px;margin-top:12px}
+@media(max-width:560px){.wks{grid-template-columns:repeat(7,minmax(0,1fr))}}
+.wks i{height:30px;border-radius:7px;border:1px solid var(--line);display:grid;place-items:center;font:500 11px var(--f-mono);font-style:normal;color:var(--muted);transition:transform .2s}
+.wks i.d{background:var(--accent);border-color:var(--accent);color:var(--onaccent)}
+.wks i:hover{transform:translateY(-3px)}
+.out{margin-top:20px;display:grid;gap:8px}
+.out li{display:grid;grid-template-columns:44px minmax(0,1fr);gap:10px;font-size:14.5px;padding:8px 0;border-top:1px solid var(--line)}
+.out code{align-self:start;text-align:center}
+
+.ftabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px}
+.ftabs button{border:1px solid var(--line);background:var(--bg);border-radius:999px;padding:5px 14px;font-size:14px;transition:.2s}
+.ftabs button.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.skills{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+@media(max-width:640px){.skills{grid-template-columns:minmax(0,1fr)}}
+.sk{border:1px solid var(--line);border-radius:12px;padding:13px 15px;display:grid;gap:3px;transition:border-color .2s,transform .2s,opacity .3s}
+.sk:hover{border-color:var(--accent);transform:translateY(-2px)}
+.sk.hide{display:none}
+.sk b{display:flex;justify-content:space-between;gap:8px;font-weight:600;font-size:15px}
+.sk b em{font:500 11px var(--f-mono);font-style:normal;color:var(--ok);white-space:nowrap}
+.sk.soon b em{color:var(--muted)}
+.sk p{color:var(--muted);font-size:13.5px}
+
+.pj{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media(max-width:640px){.pj{grid-template-columns:minmax(0,1fr)}}
+.pc{border:1px solid var(--line);border-radius:14px;padding:18px;display:flex;flex-direction:column;gap:8px;transition:transform .25s,border-color .25s;min-width:0}
+.pc:hover{transform:translateY(-4px);border-color:var(--accent)}
+.pc.big{grid-column:1/-1;background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.pc.big p{color:color-mix(in srgb,var(--bg) 72%,var(--ink))}
+.pc.big .tag{background:transparent;color:color-mix(in srgb,var(--bg) 80%,var(--ink));border-color:color-mix(in srgb,var(--bg) 30%,transparent)}
+.pc small{font:500 11px var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.pc.big small{color:#E8B63A}
+.pc h3{font-size:1.15rem}.pc p{color:var(--muted);font-size:14.5px}
+.pc.soon{border-style:dashed}
+
+.log details{border-top:1px solid var(--line)}
+.log details:first-of-type{border-top:0}
+.log summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:14px;padding:14px 2px}
+.log summary::-webkit-details-marker{display:none}
+.log summary .n{font:500 12px var(--f-mono);width:34px;color:var(--c)}
+.log summary b{flex:1;font-weight:600}
+.log summary::after{content:"+";font:400 22px/1 var(--f-ui);color:var(--muted);transition:transform .25s}
+.log details[open] summary::after{transform:rotate(45deg)}
+.log ul{padding:0 2px 16px 48px;display:grid;gap:8px;font-size:14.5px;color:var(--muted)}
+.log li{position:relative}.log li::before{content:"";position:absolute;left:-16px;top:.65em;width:6px;height:6px;background:var(--c);border-radius:2px;transform:rotate(45deg)}
+@media(max-width:560px){.log ul{padding-left:30px}}
+
+.goals{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+@media(max-width:760px){.goals{grid-template-columns:minmax(0,1fr)}}
+.g{border:1px dashed var(--line);border-radius:14px;padding:16px}
+.g small{font:500 11px var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.g h3{margin:4px 0;font-size:1.05rem}.g p{color:var(--muted);font-size:14.5px}
+
+.contact{display:grid;gap:14px}
+.mail{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.mail code{font-size:1.05rem;padding:10px 16px;border-radius:10px;user-select:all;overflow-wrap:anywhere}
+footer{max-width:920px;margin:6px auto 0;padding:20px 0 44px;color:var(--muted);font-size:13.5px;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.rv.pre{opacity:0;transform:translateY(22px)}
+.rv{transition:opacity .6s cubic-bezier(.2,.8,.2,1),transform .6s cubic-bezier(.2,.8,.2,1),border-color .25s}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001ms!important;transition-duration:.001ms!important;scroll-behavior:auto!important}.rv.pre{opacity:1;transform:none}}
+</style>
+
+<div class="wrap">
+<div class="card prof">
+ <div class="banner"><span>Frontend · Web · Öğrenci</span><div class="bars"><i></i><i></i><i></i></div></div>
+ <div class="ph">
+  <div class="avatar" id="avatar"><span>GA</span><img id="photo" alt="Göktürk Araba profil fotoğrafı" hidden></div>
+  <div class="head">
+   <div>
+    <h1>Göktürk Araba</h1>
+    <p class="role">Bilgisayar Bölümü 1. Sınıf Öğrencisi · Ön Yüz Web Geliştirici Adayı</p>
+    <p class="sub">HTML · CSS · Anlamsal yapı · Erişilebilirlik · W3C doğrulama</p>
+    <span class="status"><i></i>Yeni şeyler öğrenmeye ve projelere açığım</span>
+   </div>
+   <div class="acts">
+    <button class="btn pri" id="copyMail" type="button">✉ E-posta adresini kopyala</button>
+    <button class="btn" id="copyLink" type="button">⛓ Profil bağlantısı</button>
+   </div>
+  </div>
+  <div class="stats">
+   <div><b data-n="6">0</b><span>hafta tamamlandı</span></div>
+   <div><b data-n="5">0</b><span>laboratuvar projesi</span></div>
+   <div><b data-n="6">0</b><span>ECTS ders kredisi</span></div>
+   <div><b data-n="0">0</b><span>hedef: sayfa başına hata</span></div>
+  </div>
+ </div>
+</div>
+
+<nav class="nav" id="nav">
+ <a href="#hakkimda">Hakkımda</a><a href="#egitim">Eğitim</a><a href="#yetenekler">Yetenekler</a><a href="#projeler">Projeler</a><a href="#gunluk">Öğrenme Günlüğü</a><a href="#hedefler">Hedefler</a><a href="#iletisim">İletişim</a>
+ <span class="sp"></span><button id="theme" type="button" aria-label="Tema">◐</button>
+</nav>
+
+<section class="card about rv" id="hakkimda">
+ <h2>Hakkımda</h2>
+ <p>Merhaba, ben Göktürk. Bilgisayar bölümünde 1. sınıf öğrencisiyim ve web geliştirmeye HTML ve CSS ile başladım. Anlamlı yapı kuran, W3C doğrulayıcısından hatasız geçen ve herkesin rahat kullanabildiği, erişilebilir sayfalar yazmayı öğreniyorum.</p>
+ <p>Programlamayı izleyerek değil, kod yazarak öğrenmeye inanıyorum. Bu yüzden her hafta bir laboratuvar çalışmasıyla ilerliyorum: sayfayı kuruyor, tarayıcıda deniyor, doğrulayıcıdan geçiriyor ve hataları Chrome DevTools ile buluyorum.</p>
+ <p>Sıradaki hedeflerim Flexbox ile düzenler kurmak, JavaScript ile etkileşim eklemek ve dönem sonunda çok sayfalı, duyarlı bir web sitesini GitHub Pages'te yayınlamak.</p>
+ <div class="tags" style="margin-top:18px"><span class="tag h">HTML5</span><span class="tag c">CSS3</span><span class="tag">Anlamsal HTML</span><span class="tag">Erişilebilirlik</span><span class="tag">DevTools</span><span class="tag j">JavaScript · sırada</span></div>
+</section>
+
+<section class="card rv" id="egitim">
+ <h2>Eğitim</h2>
+ <div class="edu">
+  <div class="logo">CS</div>
+  <div>
+   <h3>Introduction to Programming and Web Technology &amp; Fundamentals of Coding</h3>
+   <p class="m">Bilgisayar bölümü · 1. dönem · Zorunlu · 6 ECTS</p>
+   <p class="m">Öğretim üyesi: Prof. Dr. Ercan Canhasi · ASU MCO 102 Fundamentals of Coding modülleri (Canvas)</p>
+   <div class="track"><div class="bar"><i id="tbar" data-w="46"></i></div><div class="lab"><span>6 / 13 hafta tamamlandı</span><span>HTML · CSS → JavaScript → Final</span></div><div class="wks" id="wks"></div></div>
+   <ul class="out" id="out"></ul>
+  </div>
+ </div>
+</section>
+
+<section class="card rv" id="yetenekler">
+ <h2>Yetenekler</h2>
+ <div class="ftabs" id="ftabs"><button class="on" data-f="all" type="button">Tümü</button><button data-f="html" type="button">HTML</button><button data-f="css" type="button">CSS</button><button data-f="tool" type="button">Araçlar</button><button data-f="soon" type="button">Sırada</button></div>
+ <div class="skills" id="skills"></div>
+</section>
+
+<section class="card rv" id="projeler">
+ <h2>Projeler</h2>
+ <div class="pj">
+  <article class="pc big"><small>Hafta 6 · Vize projesi · Notun %35'i</small><h3>Kişisel Portfolyo Web Sayfası</h3><p>Beni anlatan tek sayfa: kim olduğum, neler yapabildiğim, neler ürettiğim. Anlamsal HTML ile kurulan yapı (header, nav, about, skills, projects, education, contact, footer), düzenli tek bir harici CSS dosyası, W3C ile 0 hata. Tam sayfa ekran görüntüsü ve tasarım kararlarını anlatan kısa bir açıklamayla teslim edilir.</p><div class="tags"><span class="tag">Anlamsal HTML</span><span class="tag">CSS değişkenleri</span><span class="tag">W3C geçerli</span><span class="tag">Erişilebilir</span></div></article>
+  <article class="pc"><small>Hafta 2</small><h3>Hakkımda Sayfası</h3><p>İlk HTML sayfam: başlık hiyerarşisi, paragraflar, metin biçimlendirme ve anlamsal yerleşim elemanları. <code>div</code> kullanmadan.</p><div class="tags"><span class="tag h">HTML</span></div></article>
+  <article class="pc"><small>Hafta 3</small><h3>Çok Sayfalı Site</h3><p>Gezinme menüsüyle bağlı üç sayfa: göreli yollar, anlamlı alt metinli görseller, figür galerisi. DevTools'ta 404 yok.</p><div class="tags"><span class="tag h">Bağlantılar</span><span class="tag h">Görseller</span></div></article>
+  <article class="pc"><small>Hafta 4</small><h3>Listeler ve Tablolar</h3><p>Her sayfaya listeler ve erişilebilir bir tablo (caption, thead, th scope) eklendi; tüm sayfalar doğrulandı.</p><div class="tags"><span class="tag h">Tablo</span><span class="tag h">Doğrulama</span></div></article>
+  <article class="pc"><small>Hafta 5</small><h3>CSS ile Stillendirme</h3><p>Renk paleti için CSS değişkenleri, gezinme ve tablo stilleri, Google Fonts ve yeterli renk kontrastı.</p><div class="tags"><span class="tag c">CSS</span><span class="tag c">Değişkenler</span></div></article>
+  <article class="pc soon"><small>Sırada · Notun %45'i</small><h3>Final Proje</h3><p>Duyarlı, çok sayfalı web sitesi: site haritası, tel kafes, prototip, test ve GitHub Pages ile yayın.</p><div class="tags"><span class="tag j">HTML · CSS · JS</span><span class="tag">GitHub Pages</span></div></article>
+ </div>
+</section>
+
+<section class="card log rv" id="gunluk">
+ <h2>Öğrenme Günlüğü</h2>
+ <div id="logs"></div>
+</section>
+
+<section class="card rv" id="hedefler">
+ <h2>Hedefler</h2>
+ <div class="goals">
+  <div class="g"><small>Hafta 7</small><h3>Düzen ustalığı</h3><p>Soy seçiciler, pseudo-class'lar, kutu modeli, Flexbox ve media query'lere ilk bakış.</p></div>
+  <div class="g"><small>Hafta 8–11</small><h3>JavaScript</h3><p>Değişkenler, fonksiyonlar, olaylar, diziler ve Web API'leriyle veri okuma/yazma.</p></div>
+  <div class="g"><small>Hafta 12–13</small><h3>Final proje</h3><p>Planla, prototiple, test et, doğrula, GitHub Pages'e yükle ve sun.</p></div>
+ </div>
+</section>
+
+<section class="card contact rv" id="iletisim">
+ <h2>İletişim</h2>
+ <p style="color:var(--muted)">Staj, proje ve iş birliği için e-posta ile ulaşabilirsin.</p>
+ <div class="mail"><code id="addr">gokturkaraba@gmail.com</code><button class="btn pri" id="copyMail2" type="button">Kopyala</button><a class="btn" href="mailto:gokturkaraba@gmail.com">E-posta aç</a></div>
+</section>
+</div>
+<footer><span>© 2026 Göktürk Araba</span><span>Ders içeriği: Prof. Dr. Ercan Canhasi'nin slaytlarından</span></footer>
+
+<script>
+(function(){
+var D=document,R=D.documentElement;
+function $(s,c){return (c||D).querySelector(s)}function $$(s,c){return Array.prototype.slice.call((c||D).querySelectorAll(s))}
+function esc(t){return String(t).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")}
+function fm(t){return esc(t).replace(/`([^`]+)`/g,"<code>$1</code>")}
+var reduce=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;
+/* Profil fotoğrafı: buraya bir data: URI veya görsel yolu konur. Boşsa baş harfler görünür. */
+var PHOTO="";
+if(PHOTO){var im=$("#photo");im.src=PHOTO;im.hidden=false;$("#avatar span").hidden=true}
+var W=[
+{n:1,slug:"hafta-1",c:"var(--accent)",title:"Ders Girişi ve Müfredat",tag:"Temeller",
+ intro:"Dersin işleyişi, notlandırma, web'in nasıl çalıştığı ve ilk HTML sayfası. Programlamayı izleyerek değil, kod yazarak öğrenirsin.",
+ topics:["Dersin özeti ve amacı","Öğrenme çıktıları","Haftalık plan","Not dağılımı ve bonus","Kaynaklar ve araçlar","Akademik dürüstlük","Bilgisayar programı nedir?","Girdi → İşlem → Çıktı","Programlama dilleri","İnternet ve WWW farkı","URL yazınca ne olur?","URL'nin anatomisi","HTTP: istek ve yanıt","Front-end ve back-end","Ön yüzün üç katmanı","Statik ve dinamik siteler","Web standartları","Geliştirici araç çantası","İlk HTML sayfan","HTML elemanının anatomisi","Chrome DevTools (F12)"],
+ goals:[],
+ summary:["Ders pratik: haftalık kodlama, vizede portfolyo sayfası, sonda çok sayfalı web sitesi.","Not: %20 ASU kendi hızında + %35 vize + %45 final proje (+ en çok %15 bonus).","Program, kesin talimatlar listesidir; bilgisayarlar girdi → işlem → çıktı mantığıyla çalışır.","Web, İnternet üzerinde çalışır: tarayıcı (istemci) ↔ sunucu, URL ve HTTP ile.","Ön yüz = HTML (yapı) + CSS (sunum) + JavaScript (davranış).","Araçlar: VS Code, Chrome DevTools, W3C Validator, GitHub Pages."],
+ mist:[["Dosya kaydedilmedi","Tarayıcı eski sürümü gösterir.","Auto Save'i aç."],["Yanlış uzantı","`index.html.txt` olur, `index.html` değil.","Windows'ta dosya uzantılarını göster."],["Kapanış etiketi eksik","`\u003cp>Hello` kapanmazsa düzen garip şekilde bozulur.","Her açılan etiketi kapat."],["Yanlış iç içe geçirme","`\u003cp>\u003cstrong>Hi\u003c/p>\u003c/strong>`","Etiketleri ters sırada kapat."],["Dosya adında boşluk veya büyük harf","\"My Photo.JPG\" Windows'ta çalışır, web sunucusunda bozulur.","Küçük harf, boşluksuz isimler kullan."],["Yanlış dosyayı açmak","Düzenlediğin dosya ile tarayıcıdaki dosya farklı olabilir.","Adres çubuğundaki yolu kontrol et."]],
+ quiz:[["Görünümden (renkler, yazı tipleri, düzen) hangi katman sorumludur?",["HTML","CSS","JavaScript"],1],["DNS ne yapar?",["Veriyi şifreler","Alan adını IP adresine çevirir","Sayfayı çizer"],1],["URL'deki `?lang=en` kısmı hangisidir?",["Path (yol)","Fragment","Query string (sorgu)"],2],["Ana sayfanın varsayılan dosya adı nedir?",["home.html","index.html","main.html"],1],["HTML bir programlama dili midir?",["Evet","Hayır, bir işaretleme (markup) dilidir"],1]],
+ hw:["Hello Web sayfasını bitir ve hobilerinin kısa bir listesini ekle","DevTools ile 3 web sitesini incele: `\u003ctitle>` ve bir görseli bul","Duckett: Introduction ve Chapter 1 (Structure) bölümlerini oku","Canvas'a giriş yap ve MCO 102'yi aç"],
+ next:"Hafta 2: MCO 102 Modül 3 – HTML. Başlıklar, paragraflar, metin biçimlendirme, anlamsal yapı."},
+{n:2,slug:"hafta-2",c:"var(--html)",title:"HTML Temelleri",tag:"HTML · ASU Modül 3",
+ intro:"HTML'in ne olduğu, belge yapısı, elemanlar, öznitelikler, metin elemanları ve anlamsal sayfa iskeleti.",
+ topics:["HTML nedir?","HTML'in kısa tarihi","Belge yapısı","Elemanın anatomisi","Öznitelikler (attributes)","İç içe ve boş (void) elemanlar","Başlıklar h1–h6","Başlık hiyerarşisi","Paragraf, satır sonu, yatay çizgi","Boşlukların birleşmesi","Metin düzeyi elemanlar","Alıntı, atıf ve kod","Yorumlar ve HTML varlıkları","Block ve inline elemanlar","Anlamsal yerleşim elemanları","`div`, `span` veya anlamsal eleman?","Div soup ve anlamsal HTML","DevTools ile yapıyı incelemek","VS Code'da Emmet"],
+ goals:["HTML'in ne olduğunu açıkla ve eksiksiz, doğru bir HTML5 belgesi yaz","Eleman, etiket ve öznitelikleri doğru iç içe geçirme ve boş elemanlarla kullan","Metni başlıklar, paragraflar ve anlamlı biçimlendirme elemanlarıyla yapılandır","Özel karakterleri varlıklarla göster, koda yorum ekle","Yalnızca `\u003cdiv>` ve `\u003cspan>` yerine anlamsal elemanlarla sayfa kur","Yapıyı DevTools ile incele, Emmet ile daha hızlı HTML yaz"],
+ summary:["HTML içeriği elemanlarla işaretler; yapıyı ve anlamı tanımlar, görünümü değil.","Her sayfa: `\u003c!DOCTYPE html>`, `\u003chtml lang>`, charset, viewport ve title içeren `\u003chead>`, ve `\u003cbody>`.","Eleman = etiketler + içerik; öznitelikler bilgi ekler; doğru iç içe geçir; boş elemanların kapanış etiketi yoktur.","Bir tane `\u003ch1>`, sonra h2–h6 sırayla; paragraf `\u003cp>`; boşluklar tek boşluğa çöker.","Metin elemanlarını anlamına göre seç: `\u003cstrong>`, `\u003cem>`, `\u003cmark>`, `\u003ccode>`, `\u003cblockquote>`; `\u003c` ve `&` için varlık kullan.","Anlamsal yerleşim: header, nav, main, section, article, aside, footer – `div`/`span` yalnızca uygun eleman yoksa.","DevTools Elements yapıyı gösterir; Emmet onu hızla yazar."],
+ mist:[["`\u003c!DOCTYPE html>` veya `\u003cmeta charset>` eksik","Quirks modu, bozuk ë / ç harfleri","VS Code'da her sayfaya `!` ile başla"],["Başlığı boyutu için seçmek","Yanlış anahat, kötü erişilebilirlik","Önemine göre seç; boyutu CSS ile ver"],["Çakışan etiketler `\u003cb>\u003cp>\u003c/b>\u003c/p>`","Ağaç bozulur, tarayıcı tahmin eder","Önce içteki elemanı kapat"],["Boşluk için çok sayıda `\u003cbr>` veya boş `\u003cp>`","Yapı ile tasarım karışır","CSS margin ve padding kullan"],["Her yerde yalnızca `\u003cdiv>`","Okuyucu ve arama motorları için anlam yok","header, nav, main, section, footer kullan"],["Metinde doğrudan `\u003c` yazmak","Tarayıcı bunu etiket sanır","`&lt;` yaz (`&` için `&amp;`)"]],
+ quiz:[["Bir sayfada yalnızca bir kez bulunması gereken eleman hangisidir?",["`\u003ch2>`","`\u003ch1>`","`\u003cp>`"],1],["Hangi elemanın kapanış etiketi yoktur?",["`\u003cbr>`","`\u003cem>`","`\u003cmain>`"],0],["`\u003cp>A     B\u003c/p>` için tarayıcı ne gösterir?",["A     B","A B","AB"],1],["Metne güçlü önem veren eleman hangisidir?",["`\u003cb>`","`\u003cstrong>`","`\u003cmark>`"],1],["Ana gezinme menüsünü hangi eleman içermelidir?",["`\u003cnav>`","`\u003cheader>`","`\u003cdiv class=\"menu\">`"],0]],
+ hw:["Hakkımda (About Me) lab sayfasını bitir (`\u003cdiv>` yok, doğru başlıklar)","Café Menu TRY IT çalışmasını bitir ve bozuk sayfayı düzelt","Canvas'ta MCO 102 Modül 3: materyal, eğitim, rehberli kodlama","Modül 3 ödevini Canvas'a yükle (son tarih Canvas'ta)","Duckett, bölüm 1–2 (Structure, Text)"],
+ next:"Hafta 3: Bağlantılar ve Görseller. `\u003ca href>`, göreli/mutlak yollar, `\u003cimg>`, `\u003cfigure>` ve `\u003cfigcaption>`."},
+{n:3,slug:"hafta-3",c:"var(--html)",title:"Bağlantılar ve Görseller",tag:"HTML",
+ intro:"Sayfaları birbirine bağlamak, klasör yollarını okumak, anlamlı alt metinle görsel eklemek ve kırık bağlantıları DevTools ile bulmak.",
+ topics:["Hiperbağlantı nedir?","Anchor elemanı ve `href`","Mutlak ve göreli URL","Klasör yolları: proje ağacını okumak","Hangi yolu yazmalıyım?","Çok sayfalı sitede bağlantılar","`nav` ve `ul` ile gezinme menüsü","Parça (fragment) bağlantıları","Sık kullanılan özel bağlantılar","İyi bağlantı metni","`img` elemanı","İyi ve kötü alt metin","Görsel formatları","Görsel boyutu","`figure` ve `figcaption` ile galeri","Bağlantı olarak görsel","Duyarlı görsellere önizleme","Telif ve lisanslar","Bağlantılar ve görseller neden kırılır?","DevTools'ta 404 okumak"],
+ goals:["Diğer sitelere, diğer sayfalara ve aynı sayfadaki bölümlere `\u003ca href>` ile bağlantı oluştur","Mutlak ve göreli URL arasında seç, doğru klasör yollarını yaz","`\u003cnav>` ve `\u003cul>` ile sayfaları birbirine bağlayan menü kur","`\u003cimg>` ekle ve anlamlı alt metin yaz","Uygun görsel formatını seç, dosya boyutunu küçük tut","Kırık bağlantı ve görselleri Chrome DevTools ile bul ve düzelt"],
+ summary:["Bağlantılar `\u003ca href>` ile: başka siteler için mutlak URL, kendi dosyaların için göreli yol.","Yollar: `folder/file` aşağı iner, `../` yukarı çıkar; isimler küçük harf, boşluksuz.","Menü = `\u003cnav>` + bağlantı `\u003cul>`; her sayfada tekrarlanır; `#id` bir bölüme atlar.","Özel bağlantılar: `target=\"_blank\"` + `rel=\"noopener\"`, `mailto:`, `tel:`, `download`.","Görseller: `src`, anlamlı `alt`, `width`, `height` ve sayfanın altındakilerde `loading=\"lazy\"`.","Format: fotoğraf JPG/WebP, logo SVG, ekran görüntüsü PNG; dosyaları küçük tut, lisanslara uy.","Kırık bağlantı veya görsel mi? DevTools Console ve Network → 404'ü bul → yolu düzelt."],
+ mist:[["`\u003ca href=\"www.google.com\">`","Tarayıcı klasöründe dosya arar","Tam `https://` URL'sini yaz"],["`\u003cimg src=\"images/Photo.JPG\">`","Windows'ta çalışır, GitHub Pages'te 404","Her yerde küçük harf"],["`alt` olmayan `\u003cimg src=\"photo.jpg\">`","Ekran okuyucular dosya adını okur","Her zaman `alt` yaz"],["`alt=\"image of image\"`","Kullanıcı için işe yaramaz","Önemli olanı betimle"],["`href=\"#Contact\"` ama `id=\"contact\"`","Atlama bağlantısı hiçbir şey yapmaz","Aynı yazım, aynı harf boyutu"],["Galeride 5 MB'lık fotoğraflar","Mobilde çok yavaş sayfa","Yeniden boyutlandır + WebP/JPG"],["Bağlantı metni olarak \"Click here\"","Belirsiz, erişilebilirlik için kötü","Hedefi betimle"]],
+ quiz:[["`projects/cafe.html` dosyasından kök klasördeki `index.html`'e nasıl bağlantı verirsin?",["`index.html`","`../index.html`","`/projects/index.html`"],1],["Görsel için metin alternatifi hangi öznitelikle verilir?",["`title`","`alt`","`caption`"],1],["Her boyutta net kalması gereken logo için en iyi format hangisidir?",["JPG","SVG","GIF"],1],["`\u003ca href=\"#skills\">` hangi elemana atlar?",["`class=\"skills\"`","`id=\"skills\"`","`\u003cskills>`"],1],["DevTools bir görsel için 404 (Not Found) gösteriyor. Ne demek?",["Görsel çok büyük","Bu yolda dosya yok","Alt metin eksik"],1]],
+ hw:["3 sayfalık lab sitesini bitir; DevTools'ta 404 olmasın","Tüm alt metinleri iyileştir; bir arkadaşa anlaşılıp anlaşılmadığını sor","İndirilebilir bir CV (PDF) veya bir proje bağlantısı ekle","Duckett, bölüm 4 (Links) ve 5 (Images)","Canvas'ta MCO 102 Modül 3'e (HTML) devam et"],
+ next:"Hafta 4: Listeler, tablolar ve W3C. Listeler, tablolar, W3C Markup Validator ve doğrulama hatalarını düzeltmek."},
+{n:4,slug:"hafta-4",c:"var(--html)",title:"Doğrulama, Listeler ve Tablolar",tag:"HTML · W3C",
+ intro:"Doğru listeyi seçmek, erişilebilir tablolar kurmak, hücreleri birleştirmek ve sayfayı W3C ile 0 hataya getirmek.",
+ topics:["Üç tür liste","`ul` ve `li`","`ol`: type, start, reversed","`dl`, `dt`, `dd`","İç içe listeler","Gezinme için listeler","Tablo ne zaman kullanılır?","Tablo yapısı: bir kafe menüsü","`colspan` ve `rowspan` ile birleştirme","Haftalık ders programı örneği","Birleşik hücreli tabloyu planlamak","Erişilebilir tablolar","HTML'i neden doğrularız?","Doğrulama akışı","Sayfayı kontrol etmenin üç yolu","Hata ve uyarı farkı","En sık görülen 5 hata"],
+ goals:["Doğru listeyi seç: sırasız `\u003cul>`, sıralı `\u003col>` veya açıklama `\u003cdl>`","İç içe listeler ve bağlantı listesi olarak gezinme menüsü kur","`\u003ccaption>`, `\u003cthead>`, `\u003ctbody>`, `\u003cth scope>` ile erişilebilir veri tablosu kur","`colspan` ve `rowspan` ile hücreleri doğru birleştir","Sayfayı W3C Markup Validator ile doğrula, hata ile uyarıyı ayır","En yaygın işaretleme hatalarını sayfa 0 hata verene kadar bul ve düzelt"],
+ summary:["Sırasız öğeler için `\u003cul>`, adımlar ve sıralamalar için `\u003col>` (`start`, `reversed`), terim–açıklama için `\u003cdl>`.","İç içe listeler bir `\u003cli>` içine girer; gezinme menüsü `\u003cnav>` içinde bağlantı `\u003cul>`'sidir.","Tablolar yalnızca veri içindir: `\u003ccaption>`, `\u003cthead>`, `\u003ctbody>`, `\u003ctfoot>`, `\u003ctr>`, `\u003cth scope>`, `\u003ctd>`.","`colspan` sağa, `rowspan` aşağı birleştirir; her satırın sütun sayısı aynı olmalı.","W3C Markup Validator sayfayı URI, dosya yükleme veya doğrudan girişle denetler.","Hatalar düzeltilmeli, uyarılar tavsiyedir; her zaman önce ilk hatayı düzelt.","Bundan sonra her sayfa için hedefimiz: 0 hata."],
+ mist:[["`\u003cul>` içinde doğrudan metin","Her öğe `\u003cli>` içinde olmalı","Metin, bağlantı veya `\u003cul>` doğrudan `\u003cul>` içinde hatadır."],["İç içe liste `\u003cli>` dışında","Yanlış yapı","İçteki `\u003cul>`'yi üst `\u003cli>`'nin içine, `\u003c/li>`'dan önce koy."],["`\u003col>` içinde rakam yazmak","Tarayıcı numaralandırır","\"1.\" yazma; `start` veya `reversed` kullan."],["Başlık olarak kalın `\u003ctd>`","Ekran okuyucu bunu başlık saymaz","`scope` ile `\u003cth>` kullan."],["Birleşimle fazla hücre","Satır fazla genişler","`rowspan` veya `colspan`'in kapsadığı hücreleri yazma."],["Doğrulayıcıyı yok saymak","\"İyi görünüyor\" yetmez","Her büyük değişiklikten sonra doğrula, sadece sonda değil."]],
+ fixes:[
+  ["Hata 1: Kapanmamış ve yanlış iç içe etiketler","Etiketleri ters sırada kapat: en son açtığın ilk kapattığındır.","\u003cp>Welcome to \u003cstrong>Prizren\u003c/p>\u003c/strong>\n\u003cmain>\n \u003ch2>About me\u003c/h2>\n\u003c/body>  \u003c!-- \u003c/main> eksik -->","\u003cp>Welcome to \u003cstrong>Prizren\u003c/strong>\u003c/p>\n\u003cmain>\n \u003ch2>About me\u003c/h2>\n\u003c/main>\n\u003c/body>"],
+  ["Hata 2: Eksik alt ve yinelenen id","Her `\u003cimg>` alt ister. Her id sayfada tek olmalı; tekrar eden stiller için class kullan.","\u003cimg src=\"images/me.jpg\">\n\u003csection id=\"projects\">…\u003c/section>\n\u003csection id=\"projects\">…\u003c/section>","\u003cimg src=\"images/me.jpg\" alt=\"Arta in front of the campus\">\n\u003csection id=\"projects\">…\u003c/section>\n\u003csection id=\"hobbies\">…\u003c/section>\n\u003cimg src=\"images/line.png\" alt=\"\">  \u003c!-- dekoratif: boş alt -->"],
+  ["Hata 3: Doctype, lang ve charset","Her sayfa aynı iskeletle başlar. Sayfa Arnavutça olduğu için `lang=\"sq\"`.","\u003chtml>\n\u003chead>\n \u003ctitle>Portfolio\u003c/title>\n\u003c/head>","\u003c!DOCTYPE html>\n\u003chtml lang=\"sq\">\n\u003chead>\n \u003cmeta charset=\"UTF-8\">\n \u003cmeta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n \u003ctitle>Portfolio\u003c/title>\n\u003c/head>"],
+  ["Hata 4: Kayıp `\u003cli>` ve fazladan kapanış etiketleri","`\u003cli>` yalnızca `\u003cul>` veya `\u003col>` içinde yaşar. Başlangıçsız kapanış etiketi fazladan etikettir.","\u003cli>Espresso\u003c/li>\n\u003cli>Macchiato\u003c/li>\n\u003cp>Contact me\u003c/p>\u003c/p>","\u003cul>\n \u003cli>Espresso\u003c/li>\n \u003cli>Macchiato\u003c/li>\n\u003c/ul>\n\u003cp>Contact me\u003c/p>"],
+  ["Hata 5: Eski (obsolete) öznitelikler","Eski sunum HTML'i artık geçerli değil. Görünüm CSS'e aittir.","\u003ch1 align=\"center\">My Portfolio\u003c/h1>\n\u003ctable border=\"1\" width=\"100%\">\n\u003ccenter>Contact\u003c/center>\n\u003cfont color=\"red\">New!\u003c/font>","\u003ch1 class=\"center\">My Portfolio\u003c/h1>\n\u003ctable class=\"menu\">…\u003c/table>\n\u003cp class=\"center\">Contact\u003c/p>\n\u003cstrong class=\"new\">New!\u003c/strong>"]],
+ quiz:[["Sabit sıralı adımları olan bir tarif için en iyi liste hangisidir?",["`\u003cul>`","`\u003col>`","`\u003cdl>`"],1],["İç içe `\u003cul>` nereye konur?",["Dıştaki `\u003cul>`'nin doğrudan içine","Bir `\u003cli>`'nin içine","Dıştaki `\u003c/ul>`'den sonra"],1],["Hangi öznitelik bir hücreyi iki sütuna yayar?",["`rowspan=\"2\"`","`colspan=\"2\"`","`span=\"2\"`"],1],["Başlık hücresinin bir sütuna ait olduğunu ekran okuyucuya ne söyler?",["`\u003cb>`","`scope=\"col\"`","`border=\"1\"`"],1],["Live Server (127.0.0.1) üzerindeki sayfa için hangi doğrulama yöntemi ÇALIŞMAZ?",["By URI","By File Upload","By Direct Input"],0]],
+ hw:["Lab'ı bitir: listeler, bir tablo ve her sayfada 0 hata","İletişim sayfana açıklama listesiyle (`dl`) bir SSS ekle","Duckett: Lists ve Tables bölümlerini oku","`index.html`'deki tüm doğrulayıcı uyarılarını düzelt"],
+ next:"Hafta 5: MCO 102 Modül 4 – CSS. Seçiciler, özellikler, değerler, renkler, yazı tipleri, tablolar ve gezinme listesi için stil."},
+{n:5,slug:"hafta-5",c:"var(--css)",title:"CSS Temelleri",tag:"CSS · ASU Modül 4",
+ intro:"Yapı (HTML) ile sunumu (CSS) ayırmak, kural yazmak, seçiciler, renkler, birimler, yazı tipleri, kademe ve CSS değişkenleri.",
+ topics:["CSS nedir?","CSS kuralının anatomisi","CSS eklemenin üç yolu","`style.css`'i her sayfaya bağlamak","Temel seçiciler","Class ve id uygulamada","CSS'te renkler","Renk kontrastı ve erişilebilirlik","CSS birimleri","Google Fonts","Metin ve yazı tipi stilleri","Arka plan ve gradyanlar","Kenarlık, boşluk ve genişlik","Kademe (cascade): hangi kural kazanır?","Özgüllük (specificity)","Kalıtım (inheritance)","Renk paleti için CSS değişkenleri","Yorumlar ve stil dosyası düzeni","DevTools Styles paneli"],
+ goals:["CSS'in ne olduğunu ve yapı ile sunumu neden ayırdığımızı açıkla","CSS kuralları yaz, harici `css/style.css` dosyasını her sayfaya bağla","Eleman, class, id, gruplama ve soy seçicilerle seçim yap","Renk, birim, yazı tipi, arka plan ve kenarlıkları yeterli kontrastla kullan","Kademe, özgüllük ve kalıtımı açıkla; palet için CSS değişkenleri kullan","Chrome DevTools Styles panelinde stilleri incele, aç/kapat ve canlı düzenle"],
+ summary:["CSS sunumu tanımlar; HTML içerik ve anlamı tutar – sorumlulukların ayrılması.","Kural = seçici + `{ özellik: değer; }`; her sayfaya bağlı harici `css/style.css` kullan.","Temel seçiciler: eleman, `.class`, `#id`, virgülle gruplama, boşlukla soy seçici.","Renkler: isim, hex, rgb/rgba, hsl – kontrastı (4.5 : 1) her zaman kontrol et.","Birimler: yazı için `rem`, kenarlık için `px`, genişlik için `%` / `max-width`; yazı tipleri yedekleriyle.","Kademe: önem, özgüllük, kaynak sırası; metin özellikleri kalıtılır.","CSS değişkenleri paleti tek yerde tutar; DevTools Styles hangi kuralın kazandığını gösterir."],
+ mist:[["Hiç stil yok","Yanlış `href` yolu veya dosya adı","`css/style.css`'i kontrol et; DevTools Network → 404 var mı?"],["Bir kuraldan sonrası yok sayılıyor","`;` veya `}` eksik","Bir önceki satırı kontrol et; VS Code kırmızı işaretler gösterir."],["Class kuralı uygulanmıyor","HTML'de `.card`, CSS'te `card` yazılmış","HTML: `class=\"card\"`, CSS: `.card`"],["`16 px` etki etmiyor","Sayı ile birim arasında boşluk","`16px`, `1.5rem` yaz"],["Arka plan görseli yok","Yol HTML'e göre, CSS'e göre değil","`css/` içinden `../images/...` kullan"],["DevTools'ta kural üstü çizili","Kademeyi kaybetti (özgüllük / sıra)","Class kullan veya kuralı daha sona taşı"],["Metin zor okunuyor","Düşük renk kontrastı","Daha koyu metin veya daha açık arka plan (≥ 4.5 : 1)"]],
+ quiz:[["Çok sayfalı bir site için CSS eklemenin en iyi yolu hangisidir?",["Inline","Internal","External (harici)"],2],["`class=\"price\"` olan tüm elemanlar nasıl seçilir?",["`#price`","`.price`","`price`"],1],["Hangi birim kök yazı boyutuna göre bağıldır?",["`em`","`rem`","`px`"],1],["`\u003cp id=\"a\" class=\"b\">` için `p`, `.b` ve `#a` kuralları var. Hangisi kazanır?",["`p`","`.b`","`#a`"],2],["`--primary` değişkeni nasıl kullanılır?",["`color: --primary;`","`color: var(--primary);`","`color: $primary;`"],1]],
+ hw:["Lab'ı bitir: tüm sayfalar için düzenli tek bir `style.css`","Canvas'ta MCO 102 Modül 4'ü tamamla (eğitim, rehberli stil, ödev)","Duckett: Colour ve Text bölümlerini oku","Portfolyo için içerik topla: fotoğraf, kısa biyografi, beceriler, projeler"],
+ next:"Hafta 6: Vize atölyesi. Kişisel portfolyo sayfası (%35): taslak, stil, doğrulama ve sınıfta teslim."},
+{n:6,slug:"hafta-6",c:"var(--js)",title:"Vize Portfolyo Atölyesi",tag:"Vize · %35",
+ intro:"Kişisel portfolyo sayfasının planı, anlamsal HTML iskeleti, düzenli CSS, kalite kontrol listesi ve teslim biçimi.",
+ topics:["Vize vaka çalışması: kişisel portfolyo","Rubriğin sana uygulanışı","Değerlendirme kuralları","Portfolyo sayfasının anatomisi","Proje klasörü ve dosya adları","Anlamsal iskelet: head ve header","Anlamsal iskelet: about ve skills","Anlamsal iskelet: projects","Anlamsal iskelet: education ve contact","CSS düzeni: değişkenler ve temel","CSS düzeni: sayfa bölümleri","Okunabilir ve tutarlı tasarım","Teslim öncesi kalite listesi","Doğrulama akışı","Chrome DevTools'ta tam sayfa ekran görüntüsü","Kısa açıklama yazmak","Teslim biçimi"],
+ goals:["Kişisel portfolyo sayfasını planla ve içeriği anlamsal HTML elemanlarına eşle","Doğru lang, title, meta ve göreli yollarla temiz, geçerli HTML belgesi yaz","Stil dosyasını yorum bölümleri, CSS değişkenleri ve tutarlı class adlarıyla düzenle","Sayfayı W3C Validator ve kalite listesiyle kontrol et","Tam sayfa ekran görüntüsü al, tasarım kararlarını kısaca açıkla","Vize için eksiksiz, doğru yapılandırılmış zip klasörü teslim et"],
+ summary:["Vize (%35) kişisel bir portfolyo sayfasıdır: HTML/CSS dosyaları, ekran görüntüsü ve kısa açıklama.","Rubrik: sunum %30, analiz/çözüm %40, öneriler %15, sonuçlar %15 – ayrıntılar Canvas'ta.","Yapı: header, nav, main içinde bölümler (about, skills, projects, education, contact), footer.","CSS: tek harici dosya, yorumlu bölümler, `:root` değişkenleri, kebab-case class adları.","Kalite: 0 doğrulayıcı hatası, alt metinler, lang, title, göreli yollar, temiz dosya adları, iyi kontrast.","Tüm klasörü tek zip olarak teslim et; yapay zekâ ve akademik dürüstlük kurallarına uy – iş senin olmalı."],
+ mist:[["`C:/Users/...` gibi mutlak yollar","Görseller ve bağlantılar hocanın bilgisayarında bozulur","Göreli yol kullan: `images/me.jpg`"],["`Me Photo.JPG` – boşluk ve büyük harf","Windows'ta çalışır, web sunucusunda bozulur","Küçük harf ve tire: `me-photo.jpg`"],["Yalnızca `\u003cdiv>` elemanları","Anlamsal yapı yok → daha az puan","header, nav, main, section, footer"],["Eksik veya işe yaramaz alt (\"image\")","Erişilebilir değil; doğrulayıcı hatası","Görselin neyi gösterdiğini betimle"],["Çok sayıda etikette `style=\"...\"`","CSS düzensiz, değiştirmek zor","Tüm kuralları `css/style.css`'e taşı"],["Yalnızca `index.html` içeren zip","Teslimde CSS ve görsel yok","Tüm klasörü zip'le ve test et"],["Kopya şablon veya açıklayamadığın kod","Sözlü kontrolde akademik dürüstlük sorunu","Kendin, adım adım kur"]],
+ anatomy:[["Header","`\u003cheader>`, `\u003ch1>`, `\u003cp>`","Adın ve kısa bir unvan (ör. IT öğrencisi)"],["Navigation","`\u003cnav>`, `\u003cul>`, `\u003ca href=\"#id\">`","Sayfa bölümlerine bağlantılar"],["About","`\u003csection>`, `\u003cimg>`, `\u003cp>`","Fotoğraf veya avatar ve senin hakkında 3–5 cümle"],["Skills","`\u003csection>`, `\u003cul>`","Beceri listesi (teknik ve sosyal)"],["Projects","`\u003csection>`, `\u003carticle>`, `\u003cimg>`, `\u003ch3>`","Görsel, başlık, metin ve bağlantıyla 2–3 proje"],["Education","`\u003ctable>` veya `\u003col>` (zaman çizgisi)","Okullar, yıllar, dersler veya sertifikalar"],["Contact","`\u003csection>`, `\u003ca href=\"mailto:\">`","E-posta bağlantısı ve yalnızca profesyonel profiller"],["Footer","`\u003cfooter>`","Telif satırı ve adın"]],
+ rubric:[["Case Presentation","Sunum",30],["Analysis / Solution Options","Analiz / çözüm",40],["Recommendations","Öneriler",15],["Conclusions / Outcomes","Sonuçlar",15]],
+ check:[["HTML geçerli: 0 hata","W3C Markup Validator (validator.w3.org)"],["`lang`, charset, viewport, gerçek bir `\u003ctitle>`","`index.html`'in `\u003chead>` kısmına bak"],["Her `\u003cimg>`'de anlamlı `alt`","Alt metinleri sesli oku: görseli anlatıyor mu?"],["Yalnızca göreli yollar, `C:/Users/...` yok","Klasörü USB belleğe kopyala ve orada aç"],["Dosya adları küçük harf, boşluksuz","Klasöre ve her `src` / `href`'e bak"],["Tek `\u003ch1>`, başlıklar sırayla","h1 → h2 → h3, seviye atlama yok"],["Okunabilir yazı tipleri ve yeterli kontrast","DevTools kontrast kontrolü, %200 yakınlaştır"],["Tüm CSS `css/style.css`'te, düzenli","`style` özniteliği yok, yorumlu bölümler var"]],
+ quiz:[["Ana gezinme bağlantılarını hangi eleman içermelidir?",["`\u003cdiv class=\"menu\">`","`\u003cnav>`","`\u003cmenu-bar>`"],1],["Teslim için `images` klasöründeki fotoğrafın doğru yolu hangisidir?",["`C:/Users/Arta/images/me.jpg`","`images/me.jpg`","`images\\Me Photo.JPG`"],1],["Hangi rubrik ölçütünün ağırlığı en yüksektir?",["Case Presentation","Analysis / Solution Options","Conclusions / Outcomes"],1],["Chrome DevTools'ta tam sayfa ekran görüntüsü nasıl alınır?",["Print Screen tuşu","Ctrl+Shift+P → \"Capture full size screenshot\"","Sağ tık → Save as"],1],["Bir proje ekran görüntüsü için en iyi alt metin hangisidir?",["`alt=\"image\"`","`alt=\"Screenshot of the café menu page\"`","Alt gerekmez"],1]],
+ hw:["Portfolyo sayfasını bitir ve Canvas'tan teslim et (son tarih Canvas'ta)","Bir sınıf arkadaşından sayfanı kalite listesiyle kontrol etmesini iste","Kodunun herhangi bir bölümünü sınıfta açıklamaya hazır ol","Canvas'ta MCO 102 etkinliklerine devam et"],
+ next:"Hafta 7: Seçiciler, kutu modeli, Flexbox. Soy seçiciler, pseudo-class'lar, kutu modeli, Flexbox ve media query'lere ilk bakış."}
+];
+
+var LOS=[["LO1","Ön yüz kavramlarını, sayfa yapısını ve temel programlama mantığını açıklamak"],["LO2","Anlamsal HTML ve duyarlı CSS ile standartlara uygun sayfalar tasarlamak"],["LO3","JavaScript temelleriyle basit etkileşimli özellikler oluşturmak"],["LO4","Sayfaları geliştirici araçlarıyla test etmek, hata ayıklamak ve doğrulamak"],["LO5","HTML, CSS ve JS'yi çok sayfalı, duyarlı bir sitede birleştirmek"]];
+var SK=[
+["html","Anlamsal HTML","header, nav, main, section, article, aside, footer","Hafta 2"],
+["html","Belge yapısı ve başlık hiyerarşisi","doctype, lang, charset, viewport, h1–h6","Hafta 2"],
+["html","Bağlantılar ve yollar","Mutlak/göreli URL, klasör yolları, mailto, parça bağlantıları","Hafta 3"],
+["html","Görseller ve alt metin","Format seçimi, boyut, figure/figcaption","Hafta 3"],
+["html","Listeler ve tablolar","ul, ol, dl; caption, thead, th scope, colspan, rowspan","Hafta 4"],
+["html","Erişilebilirlik","Anlamlı alt metin, tablo başlıkları, kontrast","Hafta 3–5"],
+["css","Seçiciler ve kademe","Eleman, class, id, gruplama, soy seçici, özgüllük, kalıtım","Hafta 5"],
+["css","Renk, tipografi, birimler","Hex/rgb/hsl, 4.5:1 kontrast, rem, Google Fonts","Hafta 5"],
+["css","Düzenli stil dosyası","CSS değişkenleri, yorumlu bölümler, kebab-case class adları","Hafta 5–6"],
+["tool","W3C Markup Validator","Hata ve uyarı ayrımı, hedef 0 hata","Hafta 4"],
+["tool","Chrome DevTools","Elements, Styles, Console, Network (404 avı), tam sayfa ekran görüntüsü","Hafta 1–6"],
+["tool","VS Code ve Emmet","Hızlı HTML yazımı, Auto Save","Hafta 1–2"],
+["soon","Flexbox ve kutu modeli","Gezinme ve proje kartları için","Hafta 7"],
+["soon","JavaScript","Değişkenler, fonksiyonlar, olaylar, diziler, Web API'leri","Hafta 8–11"],
+["soon","GitHub Pages","Final projenin yayınlanması","Hafta 13"]];
+var TAGS={html:"HTML",css:"CSS",tool:"Araç",soon:"Sırada"};
+
+/* education bits */
+$("#wks").innerHTML=Array.apply(null,Array(13)).map(function(_,i){return '<i class="'+(i<6?"d":"")+'">'+(i+1)+'</i>'}).join("");
+$("#out").innerHTML=LOS.map(function(l,i){return '<li><code>'+l[0]+'</code><span>'+esc(l[1])+(i<2?' <span class="tag" style="margin-left:6px">çalışılıyor</span>':'')+'</span></li>'}).join("");
+/* skills */
+function drawSkills(f){$("#skills").innerHTML=SK.map(function(s){var soon=s[0]==="soon",show=f==="all"||f===s[0];return show?'<div class="sk '+(soon?"soon":"")+'"><b>'+esc(s[1])+'<em>'+(soon?s[3]+" · sırada":s[3])+'</em></b><p>'+esc(s[2])+'</p></div>':''}).join("")}
+drawSkills("all");
+$$("#ftabs button").forEach(function(b){b.onclick=function(){$$("#ftabs button").forEach(function(x){x.classList.remove("on")});b.classList.add("on");drawSkills(b.dataset.f)}});
+/* log */
+$("#logs").innerHTML=W.map(function(w,i){return '<details style="--c:'+w.c+'"'+(i===5?" open":"")+'><summary><span class="n">H'+w.n+'</span><b>'+esc(w.title)+'</b><span class="tag">'+esc(w.tag)+'</span></summary><ul>'+w.summary.map(function(s){return '<li>'+fm(s)+'</li>'}).join("")+'</ul></details>'}).join("");
+/* reveal */
+var rv=$$(".rv");
+if("IntersectionObserver" in window&&!reduce){
+ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.remove("pre");io.unobserve(e.target)}})},{threshold:.08});
+ rv.forEach(function(el){if(el.getBoundingClientRect().top>innerHeight*.95){el.classList.add("pre");io.observe(el)}});
+ setTimeout(function(){rv.forEach(function(el){el.classList.remove("pre")})},12000);
+}
+/* counters + bar */
+function count(el){var t=+el.dataset.n;if(reduce||!t){el.textContent=t;return}var s=performance.now();(function f(n){var p=Math.min(1,(n-s)/1100);el.textContent=Math.round(t*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(f)})(s)}
+$$("[data-n]").forEach(count);
+var tb=$("#tbar"),to=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){tb.style.width=tb.dataset.w+"%";to.disconnect()}})},{threshold:.3});to.observe(tb);
+/* scrollspy */
+var links=$$("#nav a"),secs=links.map(function(a){return $(a.getAttribute("href"))});
+function spy(){var on=-1;secs.forEach(function(s,i){if(s.getBoundingClientRect().top<innerHeight*.4)on=i});links.forEach(function(a,i){a.classList.toggle("on",i===on)});}
+var tick=false;addEventListener("scroll",function(){if(!tick){tick=true;requestAnimationFrame(function(){tick=false;spy()})}},{passive:true});
+/* copy */
+function copy(t,btn,ok){var done=function(){var o=btn.textContent;btn.textContent=ok;setTimeout(function(){btn.textContent=o},1700)};
+ try{navigator.clipboard.writeText(t).then(done,function(){sel(btn)})}catch(e){sel(btn)}
+ function sel(){var r=D.createRange();r.selectNodeContents($("#addr"));var s=getSelection();s.removeAllRanges();s.addRange(r)}}
+$("#copyMail").onclick=function(){copy("gokturkaraba@gmail.com",this,"✓ Kopyalandı")};
+$("#copyMail2").onclick=function(){copy("gokturkaraba@gmail.com",this,"✓ Kopyalandı")};
+$("#copyLink").onclick=function(){copy(location.href.split("#")[0],this,"✓ Bağlantı kopyalandı")};
+/* theme */
+try{var th=localStorage.getItem("gp-theme");if(th)R.dataset.theme=th}catch(e){}
+$("#theme").onclick=function(){var dark=R.dataset.theme?R.dataset.theme==="dark":matchMedia("(prefers-color-scheme: dark)").matches,n=dark?"light":"dark";R.dataset.theme=n;try{localStorage.setItem("gp-theme",n)}catch(e){}};
+})();
+</script>
+
+</body></html>

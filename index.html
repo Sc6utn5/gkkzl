@@ -1,90 +1,285 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
-<title>Benim Web Sayfam</title>
-<meta name="claude:viewport-fit-sides" content="cover">
-<style>
-:root{--bg:#f0f0f0;--box:#ffffff;--ink:#222222;--head:#1f4e79;--link:#0000ee;--line:#888888}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1d1f23;--box:#2a2d33;--ink:#eeeeee;--head:#8ab8e6;--link:#8ab4ff;--line:#777777;color-scheme:dark}}
-:root[data-theme="dark"]{--bg:#1d1f23;--box:#2a2d33;--ink:#eeeeee;--head:#8ab8e6;--link:#8ab4ff;--line:#777777;color-scheme:dark}
-body{background:var(--bg);color:var(--ink);font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.5;margin:0;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-bottom:20px}
-a{color:var(--link)}
-header{background:var(--head);color:#ffffff;text-align:center;padding:24px 10px;margin:0 calc(-1*max(16px,env(safe-area-inset-left,0px)))}
-header h1{margin:0;font-size:32px}
-header p{margin:6px 0 0}
-nav{text-align:center;padding:12px 0;border-bottom:1px solid var(--line)}
-nav a{margin:0 10px}
-main{max-width:760px;margin:0 auto}
-section{background:var(--box);border:1px solid var(--line);padding:6px 18px 14px;margin-top:20px}
-h2{color:var(--head);border-bottom:2px solid var(--head);padding-bottom:4px}
-table{border-collapse:collapse;width:100%}
-th,td{border:1px solid var(--line);padding:6px 8px;text-align:left}
-th{background:var(--head);color:#ffffff}
-.tw{overflow-x:auto}
-img{display:block;margin:10px auto;border:1px solid var(--line)}
-footer{text-align:center;margin-top:24px;font-size:14px}
-*{cursor:url("data:image/png;base64,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") 0 0,auto}
-</style>
+<!doctype html>
+<html lang="tr">
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width,initial-scale=1">
+ <meta name="description" content="Göktürk Kızılırmak kişisel CV ve portfolyo sayfası">
+ <title>Göktürk Kızılırmak | CV</title>
+ <style>
+ :root{
+  --bg:#f5f7f8;
+  --surface:#ffffff;
+  --text:#202428;
+  --muted:#687078;
+  --line:#d8dee3;
+  --accent:#355d7a;
+ }
+ *{box-sizing:border-box}
+ html{scroll-behavior:smooth;scroll-padding-top:84px}
+ body{
+  margin:0;
+  color:var(--text);
+  background:var(--bg);
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:16px;
+  line-height:1.65;
+ }
+ a{color:var(--accent)}
+ a:focus-visible,button:focus-visible{outline:3px solid #7fa1bd;outline-offset:3px}
+ h1,h2,h3,p{margin-top:0}
+ h1{font-size:clamp(32px,6vw,54px);line-height:1.1;margin-bottom:8px}
+ h2{font-size:26px;margin-bottom:18px;color:var(--text)}
+ h3{font-size:18px;margin-bottom:6px}
+ ul{margin:8px 0 0;padding-left:20px}
+ .wrap{width:min(1080px,calc(100% - 32px));margin:auto}
+ .topbar{
+  position:sticky;
+  top:0;
+  z-index:10;
+  background:#ffffff;
+  border-bottom:1px solid var(--line);
+ }
+ .nav{
+  min-height:64px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+ }
+ .brand{color:var(--text);text-decoration:none;font-weight:700}
+ .links{display:flex;gap:18px;flex-wrap:wrap}
+ .links a{text-decoration:none;color:var(--muted);font-size:14px}
+ .links a:hover{text-decoration:underline;color:var(--accent)}
+ header.hero{
+  background:#ffffff;
+  border-bottom:1px solid var(--line);
+ }
+ .hero .wrap{
+  min-height:280px;
+  display:grid;
+  grid-template-columns:2fr 1fr;
+  align-items:center;
+  gap:40px;
+  padding-block:56px;
+ }
+ .eyebrow{color:var(--accent);font-weight:700;text-transform:uppercase;letter-spacing:.08em;font-size:13px;margin-bottom:12px}
+ .role{font-size:20px;color:var(--muted);margin-bottom:16px}
+ .summary{max-width:680px;color:#4e555b}
+ .profile-box{
+  border-left:1px solid var(--line);
+  padding-left:32px;
+ }
+ .profile-box strong{display:block;font-size:14px;margin-bottom:10px}
+ section{padding-block:54px;border-bottom:1px solid var(--line)}
+ .section-grid{
+  display:grid;
+  grid-template-columns:220px 1fr;
+  gap:32px;
+ }
+ .section-label{color:var(--accent);font-weight:700}
+ .bio-text{max-width:760px}
+ .item{padding:18px 0;border-bottom:1px solid var(--line)}
+ .item:first-child{padding-top:0}
+ .item:last-child{border-bottom:0}
+ .item-meta{color:var(--muted);font-size:14px;margin-bottom:4px}
+ .skill-grid,.project-grid,.info-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:16px;
+ }
+ .box{
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:8px;
+  padding:18px;
+ }
+ footer{padding-block:28px;color:var(--muted);font-size:14px}
+ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+ @media(max-width:760px){
+  .nav{align-items:flex-start;padding-block:12px}
+  .links{display:none}
+  .hero .wrap{grid-template-columns:1fr;padding-block:40px}
+  .profile-box{border-left:0;border-top:1px solid var(--line);padding-left:0;padding-top:20px}
+  .section-grid{grid-template-columns:1fr;gap:14px}
+  .skill-grid,.project-grid,.info-grid{grid-template-columns:1fr}
+ }
+ </style>
+</head>
+<body>
 
-<header id="top">
- <h1>Benim Web Sayfam</h1>
- <p>Merhaba, ben Göktürk!</p>
-</header>
-
-<nav>
- <a href="#hakkimda">Hakkımda</a> |
-<a href="favicon.jpg" target="_blank" rel="noopener noreferrer">Favicon</a> <a href="#derslerim">Derslerim</a> |
- <a href="#ogrendiklerim">Öğrendiklerim</a> |
- <a href="#iletisim">İletişim</a>
-</nav>
-
-<main>
- <section id="hakkimda">
-  <h2>Hakkımda</h2>
-  <p>Merhaba! Benim adım Göktürk Araba. Bilgisayar bölümünde 1. sınıf öğrencisiyim.</p>
-  <p>Bu web sayfasını Programlama ve Web Teknolojisi dersi için yaptım. Daha yeni öğreniyorum ama kod yazmayı çok seviyorum.</p>
-  <p><b>Hedefim:</b> İyi bir web geliştirici olmak.</p>
- </section>
-
- <section id="derslerim">
-  <h2>Derslerim</h2>
-  <p>Bu dönem aldığım ders:</p>
-  <div class="tw">
-  <table>
-   <caption>Ders bilgileri</caption>
-   <tr><th>Ders</th><th>Kredi</th><th>Hoca</th></tr>
-   <tr><td>Programlamaya Giriş ve Web Teknolojisi</td><td>6 ECTS</td><td>Prof. Dr. Ercan Canhasi</td></tr>
-  </table>
+ <nav class="topbar" aria-label="Ana menü">
+  <div class="nav wrap">
+   <a class="brand" href="#top">Göktürk Kızılırmak</a>
+   <div class="links">
+    <a href="#about">Hakkımda</a>
+    <a href="#experience">Deneyim</a>
+    <a href="#education">Eğitim</a>
+    <a href="#skills">Yetenekler</a>
+    <a href="#projects">Projeler</a>
+    <a href="#contact">İletişim</a>
+   </div>
   </div>
- </section>
+ </nav>
 
- <section id="ogrendiklerim">
-  <h2>Öğrendiklerim</h2>
-  <p>Şimdiye kadar derste şunları öğrendim:</p>
-  <ul>
-   <li>HTML ile sayfa yapısı kurmayı</li>
-   <li>Başlıklar, paragraflar ve listeler</li>
-   <li>Bağlantı (link) ve resim eklemeyi</li>
-   <li>Tablo yapmayı</li>
-   <li>W3C ile sayfayı doğrulamayı</li>
-   <li>CSS ile renk ve yazı tipi vermeyi</li>
-  </ul>
-  <p>Sıradaki konular:</p>
-  <ol>
-   <li>Flexbox</li>
-   <li>JavaScript</li>
-   <li>Final projesi</li>
-  </ol>
- </section>
+ <main id="top">
+  <header class="hero">
+   <div class="wrap">
+    <div>
+     <p class="eyebrow">Ön Yüz Web Geliştirme Öğrencisi</p>
+     <h1>Göktürk Kızılırmak</h1>
+     <p class="role">Uçuş Sistemleri · Elektronik · Web Teknolojileri</p>
+     <p class="summary">
+      Tarım dronları, insansız hava araçları, elektronik sistemler ve web teknolojileri üzerinde çalışan çok disiplinli bir mühendislik öğrencisiyim.
+     </p>
+    </div>
+    <aside class="profile-box" aria-label="Kişisel bilgiler">
+     <strong>İletişim</strong>
+     <p>E-posta:<br><a href="mailto:gokturkkizilirmak@gmail.com">gokturkkizilirmak@gmail.com</a></p>
+     <p>Telefon:<br>+90 505 494 62 64</p>
+     <p>Konum:<br>Sofular Mah., Şehit Özseray Cad., Samsun</p>
+     <p>Doğum tarihi:<br>7 Kasım 2006</p>
+    </aside>
+   </div>
+  </header>
 
- <section id="iletisim">
-  <h2>İletişim</h2>
-  <p>Bana bu adresten ulaşabilirsiniz:</p>
-  <p><a href="mailto:gokturkaraba@gmail.com">gokturkaraba@gmail.com</a></p>
- </section>
-</main>
+  <section id="about">
+   <div class="section-grid wrap">
+    <div class="section-label">Hakkımda</div>
+    <div class="bio-text">
+     <p>Teknik problem çözme, bakım ve onarım, elektronik sistemler ve ekip çalışmasına odaklanan bir öğrenciyim. İHA tasarımı, otom uçuş sistemleri, model uçak teknolojileri, robotik kodlama ve tarım dronları alanlarında pratik deneyim kazandım. Takım halinde çalışmayı, teknik bilgi üretimini ve yeni teknolojiler öğrenmeyi seviyorum.</p>
+    </div>
+   </div>
+  </section>
 
-<footer>
- <p>© 2026 Göktürk Araba - Tüm hakları saklıdır</p>
- <p><a href="#top">Yukarı çık</a></p>
-</footer>
+  <section id="experience">
+   <div class="section-grid wrap">
+    <div class="section-label">İş ve Proje Deneyimi</div>
+    <div>
+     <article class="item">
+      <h3>DJI Tarım Dronları Teknik Deneyimi</h3>
+      <p class="item-meta">HELI MORE HAVACILIK TEKNOLOJİLERİ, Samsun · Haziran 2025 – Ağustos 2025</p>
+      <p>Tarım dronlarının sistemlerini kurma, bakım ve onarım işlemlerinde yardımcı olma; elektronik bileşenlerin işleyişini öğrenme ve teknik destek sağlama.</p>
+     </article>
+     <article class="item">
+      <h3>DJI Tarım Dronları Teknik Stajı</h3>
+      <p class="item-meta">HELI MORE HAVACILIK TEKNOLOJİLERİ, Samsun · Temmuz 2025 – Ağustos 2025</p>
+      <p>Tarım dronlarının sistemlerini kurma, destekleme ve saha bakım çalışmalarıyla donanım ve kalibrasyon süreçlerinde deneyim kazanma.</p>
+     </article>
+    </div>
+   </div>
+  </section>
 
-</body></html>
+  <section id="education">
+   <div class="section-grid wrap">
+    <div class="section-label">Eğitim</div>
+    <div>
+     <article class="item">
+      <h3>İngilizce Eğitimi B2</h3>
+      <p class="item-meta">CNR Dil Akademisi, Balıkesir · Ocak 2022</p>
+      <p>Orta düzey İngilizce dilbilgisi kurallarını uygulama ve konuşma pratikleri.</p>
+     </article>
+     <article class="item">
+      <h3>İngilizce Eğitimi C1</h3>
+      <p class="item-meta">CNR Dil Akademisi, Balıkesir · Haziran 2022</p>
+      <p>İletişim becerilerini geliştirme, dinleme ve konuşma pratiği yapma.</p>
+     </article>
+     <article class="item">
+      <h3>Robotik Kodlama</h3>
+      <p class="item-meta">NEIO, Balıkesir · Mayıs 2022</p>
+      <p>Robotik platformlar için programlama; temel algoritmaların Python ve C++ ile geliştirilmesi.</p>
+     </article>
+     <article class="item">
+      <h3>FIRST LEGO League Challenge</h3>
+      <p class="item-meta">Borsa İstanbul Anadolu Lisesi, Balıkesir · Temmuz 2022</p>
+      <p>Takım çalışması ve problem çözme becerilerinin geliştirilmesi.</p>
+     </article>
+     <article class="item">
+      <h3>KOSGEB Girişimcilik Eğitimi</h3>
+      <p class="item-meta">Eylül 2024</p>
+      <p>Girişimcilik temelleri, iş modeli oluşturma ve ürün geliştirme süreçleri hakkında eğitim.</p>
+     </article>
+     <article class="item">
+      <h3>Model Uçak Sertifikası</h3>
+      <p class="item-meta">Türk Hava Kurumu · Eylül 2024</p>
+      <p>Elektronik devreleri model uçaklara uygulama, uçuş mekaniği ve aerodinamik prensipleri hakkında temel bilgi.</p>
+     </article>
+    </div>
+   </div>
+  </section>
+
+  <section id="skills">
+   <div class="section-grid wrap">
+    <div class="section-label">Yetenekler</div>
+    <div class="skill-grid">
+     <article class="box">
+      <h3>Teknik Beceriler</h3>
+      <ul>
+       <li>HTML5 ve anlamsal yapı</li>
+       <li>CSS ve responsive tasarım</li>
+       <li>JavaScript temelleri</li>
+       <li>Chrome DevTools</li>
+       <li>W3C doğrulama</li>
+       <li>VS Code ve Git</li>
+       <li>Teknik problem çözme</li>
+       <li>Bakım ve onarım</li>
+       <li>Temel elektronik bilgisi</li>
+       <li>Ekip çalışması</li>
+      </ul>
+     </article>
+     <article class="box">
+      <h3>Diller</h3>
+      <ul>
+       <li>İngilizce — B2/C1</li>
+      </ul>
+      <h3 style="margin-top:18px">Hobi ve İlgi Alanları</h3>
+      <ul>
+       <li>Elektronik projeler</li>
+       <li>Programlama</li>
+       <li>Vücut geliştirme</li>
+      </ul>
+     </article>
+    </div>
+   </div>
+  </section>
+
+  <section id="projects">
+   <div class="section-grid wrap">
+    <div class="section-label">Projeler</div>
+    <div class="project-grid">
+     <article class="box">
+      <h3>TEKNOFEST 2024 – Liseler Arası İHA Yarışması</h3>
+      <p>Takım olarak derecelendirme başarısı; otom uçuş kabiliyeti olan insansız hava aracının tasarım ve üretiminde görev alma, uçuş kontrol sistemleri ve elektronik devrelerin kurulumu ile test süreçlerine katılma.</p>
+     </article>
+     <article class="box">
+      <h3>Kişisel Web ve Elektronik Projeleri</h3>
+      <p>Anlamsal HTML, CSS, JavaScript temelleri ve temel elektronik uygulamalarını içeren portfolyo çalışmalarının geliştirilmesi.</p>
+     </article>
+    </div>
+   </div>
+  </section>
+
+  <section id="contact">
+   <div class="section-grid wrap">
+    <div class="section-label">İletişim</div>
+    <div class="info-grid">
+     <div class="box">
+      <h3>E-posta</h3>
+      <a href="mailto:gokturkkizilirmak@gmail.com">gokturkkizilirmak@gmail.com</a>
+     </div>
+     <div class="box">
+      <h3>Adres</h3>
+      <p>Sofular Mah., Şehit Özseray Cad.<br>05300 Başentler ve Profesyoneller Sitesi<br>Tokat</p>
+     </div>
+    </div>
+   </div>
+  </section>
+ </main>
+
+ <footer>
+  <div class="wrap">
+   <span>© 2026 Göktürk Kızılırmak</span>
+   <span>Kişisel CV ve Portfolyo</span>
+  </div>
+ </footer>
+</body>
+</html>
