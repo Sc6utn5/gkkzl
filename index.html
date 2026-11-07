@@ -4,143 +4,32 @@
  <meta charset="utf-8">
  <meta name="viewport" content="width=device-width,initial-scale=1">
  <meta name="description" content="Göktürk Kızılırmak kişisel CV ve portfolyo sayfası">
- <link rel="icon" type="image/jpeg" href="favicon.jpg">
+ <link rel="icon" type="image/jpeg" href="favicon.png">
+ <link rel="stylesheet" href="css/style.css">
  <title>Göktürk Kızılırmak | CV</title>
- <style>
- :root{
-  --bg:#f5f7f8;
-  --surface:#ffffff;
-  --text:#202428;
-  --muted:#687078;
-  --line:#d8dee3;
-  --accent:#355d7a;
- }
- *{box-sizing:border-box}
- html{scroll-behavior:smooth;scroll-padding-top:84px}
- body{
-  margin:0;
-  color:var(--text);
-  background:var(--bg);
-  cursor:url("cursor.png.png") 0 0,auto;
-  font-family:Arial,Helvetica,sans-serif;
-  font-size:16px;
-  line-height:1.65;
- }
- a{color:var(--accent)}
- a,button,input,textarea,select{cursor:url("cursor.png.png") 0 0,auto}
- a:focus-visible,button:focus-visible{outline:3px solid #7fa1bd;outline-offset:3px}
- h1,h2,h3,p{margin-top:0}
- h1{font-size:clamp(32px,6vw,54px);line-height:1.1;margin-bottom:8px}
- h2{font-size:26px;margin-bottom:18px;color:var(--text)}
- h3{font-size:18px;margin-bottom:6px}
- ul{margin:8px 0 0;padding-left:20px}
- .wrap{width:min(1080px,calc(100% - 32px));margin:auto}
- .topbar{
-  position:sticky;
-  top:0;
-  z-index:10;
-  background:#ffffff;
-  border-bottom:1px solid var(--line);
- }
- .nav{
-  min-height:64px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:20px;
- }
- .brand{color:var(--text);text-decoration:none;font-weight:700}
- .links{display:flex;gap:18px;flex-wrap:wrap}
- .links a{text-decoration:none;color:var(--muted);font-size:14px}
- .links a:hover{text-decoration:underline;color:var(--accent)}
- header.hero{
-  background:#ffffff;
-  border-bottom:1px solid var(--line);
- }
- .hero .wrap{
-  min-height:280px;
-  display:grid;
-  grid-template-columns:2fr 1fr;
-  align-items:center;
-  gap:40px;
-  padding-block:56px;
- }
- .eyebrow{color:var(--accent);font-weight:700;text-transform:uppercase;letter-spacing:.08em;font-size:13px;margin-bottom:12px}
- .role{font-size:20px;color:var(--muted);margin-bottom:16px}
- .summary{max-width:680px;color:#4e555b}
- .profile-box{
-  border-left:1px solid var(--line);
-  padding-left:32px;
- }
- .profile-photo{
-  width:160px;
-  height:160px;
-  display:block;
-  object-fit:cover;
-  object-position:center;
-  border-radius:50%;
-  border:4px solid var(--surface);
-  box-shadow:0 0 0 1px var(--line);
-  margin-bottom:20px;
- }
- .profile-box strong{display:block;font-size:14px;margin-bottom:10px}
- section{padding-block:54px;border-bottom:1px solid var(--line)}
- .section-grid{
-  display:grid;
-  grid-template-columns:220px 1fr;
-  gap:32px;
- }
- .section-label{color:var(--accent);font-weight:700}
- .bio-text{max-width:760px}
- .item{padding:18px 0;border-bottom:1px solid var(--line)}
- .item:first-child{padding-top:0}
- .item:last-child{border-bottom:0}
- .item-meta{color:var(--muted);font-size:14px;margin-bottom:4px}
- .skill-grid,.project-grid,.info-grid{
-  display:grid;
-  grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:16px;
- }
- .box{
-  background:var(--surface);
-  border:1px solid var(--line);
-  border-radius:8px;
-  padding:18px;
- }
- footer{padding-block:28px;color:var(--muted);font-size:14px}
- footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
- @media(max-width:760px){
-  .nav{align-items:flex-start;padding-block:12px}
-  .links{display:none}
-  .hero .wrap{grid-template-columns:1fr;padding-block:40px}
-  .profile-box{border-left:0;border-top:1px solid var(--line);padding-left:0;padding-top:20px}
-  .section-grid{grid-template-columns:1fr;gap:14px}
-  .skill-grid,.project-grid,.info-grid{grid-template-columns:1fr}
- }
- </style>
 </head>
 <body>
-
- <nav class="topbar" aria-label="Ana menü">
-  <div class="nav wrap">
-   <a class="brand" href="#top">Göktürk Kızılırmak</a>
-   <div class="links">
-    <a href="#about">Hakkımda</a>
-    <a href="#experience">Deneyim</a>
-    <a href="#education">Eğitim</a>
-    <a href="#skills">Yetenekler</a>
-    <a href="#projects">Projeler</a>
-    <a href="#contact">İletişim</a>
+ <header>
+  <nav class="topbar" aria-label="Ana menü">
+   <div class="nav wrap">
+    <a class="brand" href="#top">Göktürk Kızılırmak</a>
+    <div class="nav-links">
+     <a href="#about">Hakkımda</a>
+     <a href="#experience">Deneyim</a>
+     <a href="#education">Eğitim</a>
+     <a href="#skills">Yetenekler</a>
+     <a href="#projects">Projeler</a>
+     <a href="#contact">İletişim</a>
+    </div>
    </div>
-  </div>
- </nav>
-
+  </nav>
+ </header>
  <main id="top">
-  <header class="hero">
-   <div class="wrap">
+   <section class="hero" aria-labelledby="page-name">
+   <div class="hero-inner wrap">
     <div>
      <p class="eyebrow">Ön Yüz Web Geliştirme Öğrencisi</p>
-     <h1>Göktürk Kızılırmak</h1>
+     <h1 id="page-name">Göktürk Kızılırmak</h1>
      <p class="role">Uçuş Sistemleri · Elektronik · Web Teknolojileri</p>
      <p class="summary">
       Tarım dronları, insansız hava araçları, elektronik sistemler ve web teknolojileri üzerinde çalışan çok disiplinli bir mühendislik öğrencisiyim.
@@ -151,61 +40,61 @@
      <strong>İletişim</strong>
      <p>E-posta:<br><a href="mailto:gokturkkizilirmak@gmail.com">gokturkkizilirmak@gmail.com</a></p>
      <p>Telefon:<br>+90 505 494 62 64</p>
-     <p>Konum:<br>Sofular Mah., Şehit Özseray Cad., Samsun</p>
+     <p>Konum:<br>Sofular Mah., Şehit Özseray Cad., <a href="https://tr.wikipedia.org/wiki/Samsun" target="_blank" rel="noopener noreferrer">Samsun</a></p>
      <p>Doğum tarihi:<br>7 Kasım 2006</p>
     </aside>
    </div>
-  </header>
+  </section>
 
-  <section id="about">
+  <section class="content-section" id="about">
    <div class="section-grid wrap">
     <div class="section-label">Hakkımda</div>
     <div class="bio-text">
-     <p>Teknik problem çözme, bakım ve onarım, elektronik sistemler ve ekip çalışmasına odaklanan bir öğrenciyim. İHA tasarımı, otom uçuş sistemleri, model uçak teknolojileri, robotik kodlama ve tarım dronları alanlarında pratik deneyim kazandım. Takım halinde çalışmayı, teknik bilgi üretimini ve yeni teknolojiler öğrenmeyi seviyorum.</p>
+     <p>Teknik problem çözme, bakım ve onarım, elektronik sistemler ve ekip çalışmasına odaklanan bir öğrenciyim. İHA tasarımı, Otonom Uçuş Sistemleri, Model Uçak Teknolojileri, Robotik Kodlama ve Tarım dronları alanlarında pratik deneyim kazandım. Takım halinde çalışmayı, teknik bilgi üretimini ve yeni teknolojiler öğrenmeyi seviyorum.</p>
     </div>
    </div>
   </section>
 
-  <section id="experience">
+  <section class="content-section" id="experience">
    <div class="section-grid wrap">
     <div class="section-label">İş ve Proje Deneyimi</div>
     <div>
      <article class="item">
       <h3>DJI Tarım Dronları Teknik Deneyimi</h3>
-      <p class="item-meta">HELI MORE HAVACILIK TEKNOLOJİLERİ, Samsun · Haziran 2025 – Ağustos 2025</p>
+      <p class="item-meta">HELİMORE HAVACILIK TEKNOLOJİLERİ, <a href="https://tr.wikipedia.org/wiki/Samsun" target="_blank" rel="noopener noreferrer">Samsun</a> · Haziran 2025 – Ağustos 2025</p>
       <p>Tarım dronlarının sistemlerini kurma, bakım ve onarım işlemlerinde yardımcı olma; elektronik bileşenlerin işleyişini öğrenme ve teknik destek sağlama.</p>
      </article>
      <article class="item">
       <h3>DJI Tarım Dronları Teknik Stajı</h3>
-      <p class="item-meta">HELI MORE HAVACILIK TEKNOLOJİLERİ, Samsun · Temmuz 2025 – Ağustos 2025</p>
+      <p class="item-meta">HELİMORE HAVACILIK TEKNOLOJİLERİ, <a href="https://tr.wikipedia.org/wiki/Samsun" target="_blank" rel="noopener noreferrer">Samsun</a> · Temmuz 2025 – Ağustos 2025</p>
       <p>Tarım dronlarının sistemlerini kurma, destekleme ve saha bakım çalışmalarıyla donanım ve kalibrasyon süreçlerinde deneyim kazanma.</p>
      </article>
     </div>
    </div>
   </section>
 
-  <section id="education">
+  <section class="content-section" id="education">
    <div class="section-grid wrap">
     <div class="section-label">Eğitim</div>
     <div>
      <article class="item">
       <h3>İngilizce Eğitimi B2</h3>
-      <p class="item-meta">CNR Dil Akademisi, Balıkesir · Ocak 2022</p>
+      <p class="item-meta">CNR Dil Akademisi, <a href="https://tr.wikipedia.org/wiki/Bal%C4%B1kesir" target="_blank" rel="noopener noreferrer">Balıkesir</a> · Ocak 2022</p>
       <p>Orta düzey İngilizce dilbilgisi kurallarını uygulama ve konuşma pratikleri.</p>
      </article>
      <article class="item">
       <h3>İngilizce Eğitimi C1</h3>
-      <p class="item-meta">CNR Dil Akademisi, Balıkesir · Haziran 2022</p>
+      <p class="item-meta">CNR Dil Akademisi, <a href="https://tr.wikipedia.org/wiki/Bal%C4%B1kesir" target="_blank" rel="noopener noreferrer">Balıkesir</a> · Haziran 2022</p>
       <p>İletişim becerilerini geliştirme, dinleme ve konuşma pratiği yapma.</p>
      </article>
      <article class="item">
       <h3>Robotik Kodlama</h3>
-      <p class="item-meta">NEIO, Balıkesir · Mayıs 2022</p>
+      <p class="item-meta">NEIO, <a href="https://tr.wikipedia.org/wiki/Bal%C4%B1kesir" target="_blank" rel="noopener noreferrer">Balıkesir</a> · Mayıs 2022</p>
       <p>Robotik platformlar için programlama; temel algoritmaların Python ve C++ ile geliştirilmesi.</p>
      </article>
      <article class="item">
       <h3>FIRST LEGO League Challenge</h3>
-      <p class="item-meta">Borsa İstanbul Anadolu Lisesi, Balıkesir · Temmuz 2022</p>
+      <p class="item-meta">Borsa İstanbul Anadolu Lisesi, <a href="https://tr.wikipedia.org/wiki/Bal%C4%B1kesir" target="_blank" rel="noopener noreferrer">Balıkesir</a> · Temmuz 2022</p>
       <p>Takım çalışması ve problem çözme becerilerinin geliştirilmesi.</p>
      </article>
      <article class="item">
@@ -215,14 +104,14 @@
      </article>
      <article class="item">
       <h3>Model Uçak Sertifikası</h3>
-      <p class="item-meta">Türk Hava Kurumu · Eylül 2024</p>
+      <p class="item-meta">Türk Hava Kurumu, <a href="https://tr.wikipedia.org/wiki/Eski%C5%9Fehir" target="_blank" rel="noopener noreferrer">Eskişehir</a> · Eylül 2024</p>
       <p>Elektronik devreleri model uçaklara uygulama, uçuş mekaniği ve aerodinamik prensipleri hakkında temel bilgi.</p>
      </article>
     </div>
    </div>
   </section>
 
-  <section id="skills">
+  <section class="content-section" id="skills">
    <div class="section-grid wrap">
     <div class="section-label">Yetenekler</div>
     <div class="skill-grid">
@@ -231,9 +120,7 @@
       <ul>
        <li>HTML5 ve anlamsal yapı</li>
        <li>CSS ve responsive tasarım</li>
-       <li>JavaScript temelleri</li>
-       <li>Chrome DevTools</li>
-       <li>W3C doğrulama</li>
+
        <li>VS Code ve Git</li>
        <li>Teknik problem çözme</li>
        <li>Bakım ve onarım</li>
@@ -244,36 +131,59 @@
      <article class="box">
       <h3>Diller</h3>
       <ul>
-       <li>İngilizce — B2/C1</li>
+       <li>İngilizce -C1</li>
+        <li>japonca - A1</li>
+        <li>Korece - A1</li>
+        <li>Türkçe - Anadil</li>
       </ul>
-      <h3 style="margin-top:18px">Hobi ve İlgi Alanları</h3>
+      <h3 class="box-subtitle">Hobi ve İlgi Alanları</h3>
       <ul>
        <li>Elektronik projeler</li>
        <li>Programlama</li>
+       <li>Tenis</li>
+       <li>Piano</li>
        <li>Vücut geliştirme</li>
       </ul>
+      <div class="mini-slider" aria-label="Tenis ve elektronik/yazılım hobi fotoğrafı slaytı">
+       <div class="mini-slider-track">
+        <figure class="mini-slide">
+         <img src="hobby-tennis.jpeg" alt="Göktürk tenis oynarken">
+         <figcaption>Tenis</figcaption>
+        </figure>
+        <figure class="mini-slide">
+         <img src="hobby-electronics-concept.png" alt="Elektronik ve havacılık çalışma ortamı">
+         <figcaption>Elektronik &amp; Havacılık</figcaption>
+        </figure>
+       </div>
+      </div>
      </article>
     </div>
    </div>
   </section>
 
-  <section id="projects">
+  <section class="content-section" id="projects">
    <div class="section-grid wrap">
     <div class="section-label">Projeler</div>
     <div class="project-grid">
-     <article class="box">
+     <article class="box project-with-photo">
+      <img class="project-photo" src="IMG_20240703_093356.jpg" alt="TEKNOFEST 2024 İHA projesinde uçuş hazırlığı">
+      <div>
       <h3>TEKNOFEST 2024 – Liseler Arası İHA Yarışması</h3>
       <p>Takım olarak derecelendirme başarısı; otom uçuş kabiliyeti olan insansız hava aracının tasarım ve üretiminde görev alma, uçuş kontrol sistemleri ve elektronik devrelerin kurulumu ile test süreçlerine katılma.</p>
+      </div>
      </article>
-     <article class="box">
-      <h3>Kişisel Web ve Elektronik Projeleri</h3>
-      <p>Anlamsal HTML, CSS, JavaScript temelleri ve temel elektronik uygulamalarını içeren portfolyo çalışmalarının geliştirilmesi.</p>
+     <article class="box project-with-photo">
+      <img class="project-photo" src="project-electronics.png" alt="Kişisel elektronik proje çalışması">
+      <div>
+       <h3>Kişisel Web ve Elektronik Projeleri</h3>
+       <p>Anlamsal HTML, CSS ve responsive tasarım tekniklerini içeren kişisel web ve portfolyo çalışmalarının geliştirilmesi; elektronik prototiplerin kodlama ve test süreçlerinin uygulanması.</p>
+      </div>
      </article>
     </div>
    </div>
   </section>
 
-  <section id="contact">
+  <section class="content-section" id="contact">
    <div class="section-grid wrap">
     <div class="section-label">İletişim</div>
     <div class="info-grid">
@@ -282,8 +192,13 @@
       <a href="mailto:gokturkkizilirmak@gmail.com">gokturkkizilirmak@gmail.com</a>
      </div>
      <div class="box">
-      <h3>Adres</h3>
-      <p>Sofular Mah., Şehit Özseray Cad.<br>05300 Başentler ve Profesyoneller Sitesi<br>Tokat</p>
+      <h3>Sosyal Medya Hesapları</h3>
+       <p class="contact-address">Instagram:
+        <a href="https://www.instagram.com/Sc6utn/" target="_blank" rel="noopener noreferrer">@Sc6utn</a>
+       </p>
+        <p>GitHub:
+         <a href="https://github.com/Sc6utn5" target="_blank" rel="noopener noreferrer">@Sc6utn5</a>
+        </p>
      </div>
     </div>
    </div>
@@ -291,9 +206,8 @@
  </main>
 
  <footer>
-  <div class="wrap">
+   <div class="footer-inner wrap">
    <span>© 2026 Göktürk Kızılırmak</span>
-   <span>Kişisel CV ve Portfolyo</span>
   </div>
  </footer>
 </body>
